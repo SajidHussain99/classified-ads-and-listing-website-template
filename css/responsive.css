@@ -1,0 +1,67 @@
+/* /////////////////////Responsive styling code ////////////// */
+
+@media (max-width: 575.9px) {
+  nav {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .brandTitle {
+    font-size: 1.5rem;
+  }
+  .mini-cards {
+    background-color: var(--primary-color1);
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .mini-cards :first-child,
+  .mini-cards :nth-child(2) {
+    color: #fff;
+  }
+
+  .p-card {
+    height: 500px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+@media (max-width: 1240px) {
+  nav ul {
+    position: fixed;
+    top: 150px;
+    left: -100%;
+    background: #f8f8f8;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  nav ul li a {
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+    color: #1b1b1b;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: none;
+    color: #000;
+  }
+  #header-menu {
+    display: block;
+  }
+  .header-btns {
+    margin-top: 10px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+}
+
+@media (min-width: 1200px) {
+}

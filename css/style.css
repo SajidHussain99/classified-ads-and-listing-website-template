@@ -1,0 +1,593 @@
+/* ###############################################################################################################
+                                    classified-ads-and-listing-website-template
+                                    Author: Sajid Hussain
+################################################################################################################## */
+
+/* Table of Content:
+1 Genaric code section
+2 Top-Header
+3 Main Header */
+
+/* ########################################### 01: Generic styling############################### */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color1: #00bcd4;
+  --primary-color2: #00e676;
+  --primary-color3: #e91e63;
+  --primary-color4: #70af1a;
+  --text-color: #b2b2b2;
+  --logo-color: #82b440;
+}
+
+/* ########################################### 02: Top Header styling ############################### */
+.logo {
+  color: var(--logo-color);
+  margin: auto;
+  font-size: 1.2rem;
+}
+.top-header {
+  background-color: #262626;
+  align-items: center;
+}
+.com-title1 {
+  color: #fff;
+  font-size: 2rem;
+}
+.com-title2 {
+  color: #82b440;
+  font-size: 2rem;
+}
+.buy-now {
+  font-size: 1rem;
+  color: blanchedalmond;
+  border-radius: 5px;
+  padding: 4px 25px 4px 25px;
+  background-color: #82b440;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.buy-now:hover,
+.buy-now:focus {
+  outline: none;
+  border: none;
+  background-color: #6c9931;
+  transition: 0.3 ease-in-out;
+}
+
+/* ########################################### 03:  Top Banner styling ############################### */
+.top-banner {
+  background-image: url("/src/images/back2.jpg");
+  background-size: cover;
+  object-fit: contain;
+  padding-bottom: 80px;
+  background-color: rgba(21, 68, 226, 0.8);
+}
+
+/* ########################################### 03.1: Navbar styling ############################### */
+nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px 0px 50px;
+  width: 100%;
+}
+
+.brandTitle {
+  font-size: 2rem;
+  color: var(--primary-color1);
+  cursor: pointer;
+  text-decoration: none;
+}
+.brandTitle:hover {
+  text-decoration: none;
+}
+
+nav .menu-btn i {
+  color: #1b1b1b;
+  font-size: 22px;
+  cursor: pointer;
+}
+#header-menu {
+  display: none;
+}
+#checkboxClick:checked ~ .menu-btn i::before {
+  content: "\f00d";
+}
+#checkboxClick:checked ~ ul {
+  left: 0%;
+}
+#checkboxClick {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  transition: 0.4s ease;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  font-family: "Teko", sans-serif;
+  text-transform: capitalize;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  z-index: 5px;
+  color: var(--primary-color1);
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.active-page,
+.active-page:hover {
+  background-color: var(--primary-color1);
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 13px;
+  width: max-content;
+  margin: auto;
+}
+.header-btns {
+  border-radius: 19px;
+  background-color: var(--primary-color1);
+
+  align-items: center;
+  padding: 5px 20px;
+}
+.header-btns:hover {
+  background-color: #fff;
+}
+
+.header-btnsTitle {
+  text-decoration: none;
+  color: #fff;
+  align-self: center;
+  width: max-content;
+}
+
+.header-btnsTitle:hover {
+  text-decoration: none;
+  color: var(--primary-color1);
+  align-self: center;
+  width: max-content;
+}
+
+/* ########################################### 03.2: Inner Banner styling ############################### */
+
+.wel-titl-1 {
+  padding-top: 60px;
+  color: #fff;
+}
+.wel-titl-2 {
+  color: var(--primary-color1);
+}
+.banner-para {
+  color: #fff;
+  max-width: 640px;
+}
+
+/* ########################################### 03.3: banner-search-section styling ############################### */
+.banner-search-section {
+  width: 80%;
+  border-radius: 25px;
+  background-color: rgba(89, 91, 99, 0.2);
+}
+.banner-inputs {
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  width: 260px;
+}
+.b-input {
+  border: none;
+  outline: none;
+  appearance: none;
+  width: 100%;
+}
+.b-icons {
+  color: var(--primary-color1);
+}
+.b-icons-s {
+  color: #fff;
+}
+.b-arrow-icons {
+  color: #9e9e9e;
+}
+.b-search {
+  background-color: var(--primary-color1);
+}
+.b-search-title {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* ########################################### 04: inner body styling ############################### */
+.mini-cards-sec,
+.latest-product-sec-inner,
+.inner-r-l-section,
+.inner-join,
+.inner-p-places,
+.f-row1,
+.f-main {
+  max-width: 1280px;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/* ########################################### 05: mini-cards-section styling ############################### */
+
+.inner-mini-cards {
+  background-color: #fafafa;
+}
+.mini-cards-sec {
+  background-color: #fafafa;
+}
+
+.mini-cards {
+  height: 150px;
+  width: 170px;
+  border-radius: 5px;
+}
+.mini-cards:hover,
+.mini-cards:focus {
+  background-color: var(--primary-color1);
+  cursor: pointer;
+}
+.mini-cards:hover :first-child,
+.mini-cards:hover :nth-child(2) {
+  color: #fff;
+}
+
+.mini-c-icons {
+  height: 100px;
+  width: 100%;
+  font-size: 2rem;
+  color: #9e9e9e;
+}
+.mini-cards p {
+  height: 50px;
+  width: 100%;
+  font-size: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+/* ########################################### 06: Latest products section styling ############################### */
+
+.p-card {
+  height: 460px;
+  width: 360px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border-radius: 5px;
+}
+.p-card-upper {
+  height: 200px;
+  background-size: cover;
+  object-fit: contain;
+  cursor: pointer;
+}
+.pc-1 {
+  background-image: url("../src/images/iphone-2.jpg");
+  border-radius: 5px;
+}
+.pc-2 {
+  background-image: url("../src/images/room.jpg");
+  border-radius: 5px;
+}
+.pc-3 {
+  background-image: url("../src/images/dslr.jpg");
+  border-radius: 5px;
+}
+.pc-4 {
+  background-image: url("../src/images/car.jpg");
+  border-radius: 5px;
+}
+.pc-5 {
+  background-image: url("../src/images/mac.jpg");
+  border-radius: 5px;
+}
+.pc-6 {
+  background-image: url("../src/images/resturant.jpg");
+  border-radius: 5px;
+}
+
+.p-c-heart {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color1);
+  float: right;
+}
+.p-c-heart-icon {
+  color: #fff;
+}
+.p-folder,
+.p-l-cat {
+  color: var(--primary-color1);
+}
+.p-name {
+  font-weight: bold;
+  margin: 0px;
+}
+.p-price {
+  color: var(--primary-color1);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.p-text {
+  color: #999999;
+}
+.p-c-add {
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  width: max-content;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+}
+.p-c-add:hover,
+.p-c-add:hover .fa-check-square {
+  background-color: var(--primary-color1);
+  color: #fff;
+}
+.fa-check-square {
+  color: var(--primary-color1);
+}
+
+/* ################################################# 07: Recent Listing ############################### */
+
+.recent-listing-sec {
+  background-color: #f7f7f7;
+}
+.r-l-card {
+  height: 310px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  border-bottom: 2px solid var(--primary-color4);
+}
+.r-l-upper {
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.r-l-b-img {
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1s;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.rl-1 {
+  background-image: url("../src/images/backery.jpg");
+}
+.rl-2 {
+  background-image: url("../src/images/car.jpg");
+}
+.rl-3 {
+  background-image: url("../src/images/dslr.jpg");
+}
+.rl-4 {
+  background-image: url("../src/images/mac.jpg");
+}
+.rl-5 {
+  background-image: url("../src/images/resturant.jpg");
+}
+.rl-6 {
+  background-image: url("../src/images/room.jpg");
+}
+.rl-7 {
+  background-image: url("../src/images/car.jpg");
+}
+.rl-8 {
+  background-image: url("../src/images/iphone-x.jpg");
+}
+.r-l-b-img:hover {
+  transform: scale(1.11);
+}
+.cara-btns {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.rating {
+  color: #e5eb0b;
+}
+.discriptin {
+  color: var(--text-color);
+}
+.r-l-icons1 {
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  float: right;
+}
+.r-l-icons2 {
+  background-color: var(--primary-color4);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  float: right;
+}
+.r-l-icon1 {
+  color: var(--primary-color4);
+}
+.r-l-icon2 {
+  color: #fff;
+}
+
+.carousel-indicators {
+  color: var(--primary-color4);
+}
+
+/* ##########################################   join-sec     ############################### */
+.join-sec {
+  background-image: url("../src/images/join-back.jpg");
+  background-size: cover;
+  object-fit: contain;
+}
+.j-heading {
+  color: #fff;
+  font-weight: bold;
+}
+.j-para {
+  color: #fff;
+  font-weight: 500;
+}
+.join-btn {
+  padding: 10px 20px;
+  border: 2px solid yellow;
+  border-radius: 5px;
+  color: yellow;
+  background-color: rgba(255, 255, 0, 0.2);
+  text-decoration: none;
+}
+.join-btn:hover {
+  color: black;
+  background-color: rgb(255, 255, 0);
+  text-decoration: none;
+}
+
+/* #########################################   popular-places-section  ######################### */
+.pp-card {
+  height: 200px;
+  background-size: cover;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.ppc1 {
+  width: 700px;
+  background-image: url("../src/images/pp1.jpg");
+  border-radius: 5px;
+}
+.ppc2 {
+  width: 400px;
+  background-image: url("../src/images/pp2.jpg");
+  border-radius: 5px;
+}
+.ppc3 {
+  width: 300px;
+  background-image: url("../src/images/pp3.jpg");
+  border-radius: 5px;
+}
+.ppc4 {
+  width: 400px;
+  background-image: url("../src/images/pp4.jpg");
+  border-radius: 5px;
+}
+.ppc5 {
+  width: 400px;
+  background-image: url("../src/images/pp5.jpg");
+  border-radius: 5px;
+}
+.pp-title,
+.pp-discriptin {
+  color: #fff;
+}
+.pp-discriptin {
+  display: none;
+}
+
+.pp-left:hover .pp-discriptin {
+  display: block;
+}
+
+.pp-title2 {
+  color: #b7b7b7;
+}
+
+/* ################################################## Footer ######################################## */
+.f-top {
+  padding: 20px 20px;
+  background-color: var(--primary-color4);
+}
+.f-top-title {
+  color: #fff;
+  font-weight: bold;
+}
+.f-top-title2 {
+  color: #fff;
+}
+.f-input {
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  color: var(--text-color);
+  outline: none;
+}
+.f-singup-btn {
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  background-color: yellow;
+}
+.f-last {
+  background-color: #222;
+  padding: 20px 20px;
+}
+.f-com-name {
+  color: yellow;
+}
+.f-last-title {
+  color: var(--text-color);
+}
+.f-row2 {
+  background-image: url("../src/images/f-back.jpg");
+  background-size: cover;
+  object-fit: contain;
+  overflow: hidden;
+}
+.brand-name {
+  color: #fff;
+  font-weight: bold;
+}
+.f-dis {
+  color: var(--text-color);
+}
+.f-links-head {
+  color: #fff;
+  font-weight: bold;
+}
+.f-links {
+  color: var(--primary-color4);
+  list-style: none;
+  cursor: pointer;
+}
+.f-links:hover {
+  text-decoration: underline;
+}
